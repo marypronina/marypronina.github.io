@@ -168,7 +168,7 @@ Animation
 Media
 */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     #progress_bar {
         width: 50%;
         height: auto;
