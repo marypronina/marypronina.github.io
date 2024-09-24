@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="stylesheets/clear.css" />
+        <link rel="stylesheet" href="stylesheets/main.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300"
+            rel="stylesheet"
+            type="text/css"
+        />
+
+        <script src="index.js"></script>
+
+        <title>Progress bar</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Progress</h1>
+
+            <div class="flex-container">
+                <div id="progress_bar">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewbox="0 0 100 100"
+                    >
+                        <circle stroke="gray" />
+                        <circle class="progress-circle"></circle>
+                    </svg>
+                </div>
+
+                <div class="states-container">
+                    <div class="switch-container">
+                        <input type="number" id="valueInput" />
+                        <label for="valueInput">Value</label>
+                    </div>
+
+                    <div class="switch-container">
+                        <label class="switcher">
+                            <input type="checkbox" id="animation-switch" />
+                            <span class="switcher_circle"></span>
+                        </label>
+                        <p>Animate</p>
+                    </div>
+
+                    <div class="switch-container">
+                        <label class="switcher">
+                            <input type="checkbox" id="visibility-switch" />
+                            <span class="switcher_circle"></span>
+                        </label>
+                        <p>Hide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

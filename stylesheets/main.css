@@ -1,0 +1,205 @@
+/*
+Containers
+*/
+
+body {
+    font-family: "Open Sans";
+}
+
+.container {
+    margin: 20px;
+}
+
+.flex-container {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25%;
+}
+
+.states-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/*
+Elements
+*/
+
+#progress_bar {
+    width: 25%;
+    height: auto;
+    /* aspect-ratio: 1/1; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+#progress_bar.hidden {
+    visibility: hidden;
+}
+
+#valueInput {
+    height: 50px;
+    width: 80px;
+
+    border: solid 1px #000;
+    border-radius: 50px;
+}
+
+/*
+Switches
+*/
+
+.switcher {
+    position: relative;
+    display: inline-block;
+
+    width: 80px;
+    height: 50px;
+    background-color: #d4e7fd;
+    border-radius: 50px;
+}
+
+.switcher input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+.switcher_circle {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border-radius: 50px;
+
+    transition: 0s;
+}
+
+.switcher_circle:before {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    content: "";
+
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    transition: 0.2s;
+}
+
+input:checked + .switcher_circle {
+    background-color: #06f;
+}
+
+input:checked + .switcher_circle:before {
+    transform: translateX(30px);
+}
+
+/*
+SVG
+*/
+
+svg {
+    width: 100%;
+    height: aut0;
+    /* aspect-ratio: 1/1; */
+    rotate: -90deg;
+}
+
+circle {
+    fill: none;
+    stroke: #d4e7fd;
+    stroke-width: 7%;
+    cx: 50;
+    cy: 50;
+    r: 46%;
+}
+
+.progress-circle {
+    stroke: #06f;
+    stroke-dasharray: 0 290;
+}
+
+/*
+Animation
+*/
+
+.animated {
+    animation: spin 5s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*
+Media
+*/
+
+@media screen and (max-width: 800px) {
+    #progress_bar {
+        width: 50%;
+        height: auto;
+    }
+
+    circle {
+        width: 50%;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+/*
+Text
+*/
+
+h1 {
+    font-size: 30px;
+    left: 0;
+    top: 0;
+}
+
+p, label {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+input {
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 25px;
+}
